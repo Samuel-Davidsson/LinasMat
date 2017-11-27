@@ -54,7 +54,7 @@ namespace LinaWEB
                 //TODO changes this up.
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Recipe}/{action=Recipe}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

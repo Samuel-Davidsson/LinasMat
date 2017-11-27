@@ -1,34 +1,39 @@
 ﻿<!DOCTYPE html>
-<html lang="sv">
+<html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8" />
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="/materialize/dist/css/materialize.css" rel="stylesheet" />
-    <link href="/lib/styles/reset.css" rel="stylesheet" />
-    <link href="/lib/styles/overrides.css" rel="stylesheet" />
-
-    <title>LinasMatkasse</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Linas Matkasse</title>
+    <link rel="stylesheet" href="~/lib/materialize/css/materialize.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <div>
+    <nav>
+        <div class="container">
+
+            <div class="nav-wrapper">
+                <a asp-controller="Home" asp-action="Index" class="brand-logo">Linas Matkasse</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li is-active-route asp-controller="Home">
+                        <a asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - LinasMatkasse</p>
+        </footer>
     </div>
-    <header class="cyan left-align white-text font-weight-light">
-        <ul id="slide-out" class="side-nav fixed cyan lighten-5 col s1 m1 l1">
-            <li><a>Lägg till recept.</a></li>
-            <li><a>Gör en recension.</a></li>
-        </ul>
-        <a href="#" data-activates="slide-out" class="button-collapse white-text"><i class="material-icons">menu</i></a>
-        <div class="center-align">
-            <img src="Inser picuture" alt="LinasMatkasse-Logo" />
-        </div>
 
-    </header>
-    <main class="cyan-text text-darken-1">
-        <div>
-            @RenderBody()
-        </div>
-    </main>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/materialize/js/materialize.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 
+    @RenderSection("Scripts", false)
 </body>
 </html>
-
