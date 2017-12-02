@@ -1,14 +1,166 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
 
-    <a class='dropdown-button btn' href='#' data-hover="true" data-activates='dropdown1'>Drop Me!</a>
-    <ul id='dropdown1' class='dropdown-content'>
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
-        <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
-        <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
-    </ul>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Välkommen till dina Linas favoriter!</title>
 
-}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />    
+
+</head>
+<body>
+<nav class="teal" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Linas favoriter</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="https://www.linasmatkasse.se/">Linas Matkasse hemsida</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="https://www.linasmatkasse.se/">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+    <div id="index-banner" class="parallax-container">
+        <div class="section no-pad-bot">
+            <div class="container">
+                <br><br>
+                <h1 class="header center teal-text text-lighten-2">Välkommen till dina Linas favoriter</h1>
+                <div class="row center">
+                    <h5 class="header col s12 light">Här kan du lägga till alla din favorit recept från Linas</h5>
+                </div>
+                <div class="row center">
+                    <a href="#" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Logga in</a>
+                </div>
+                <br><br>
+
+            </div>
+        </div>
+        <div class="parallax"><img src="~/lib/images/background1.jpg"></div>
+    </div>
+
+
+    <div class="container">
+        <div class="section">
+
+
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
+                        <h5 class="center"></h5>
+
+                        <p class="light">Ett enkelt sätt för dig att spara dina favoriter från matkassen istället för att ha högar med papper med liggandes</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+                        <h5 class="center"></h5>
+
+                        <p class="light">Här kan du lägga till dina recept och ingredienser om det saknas</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
+                        <h5 class="center"></h5>
+
+                        <p class="light">You can also give the the recipies the ratings they deserv</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        @*<div class="section no-pad-bot">
+            <div class="container">
+                <div class="row center">
+                    <h5 class="header col s12 light"></h5>
+                </div>
+            </div>
+        </div>*@
+        <div class="parallax"><img src=~/lib/images/background2.jpg alt="Unsplashed background img 2"></div>
+    </div>
+
+    <div class="container">
+        <div class="section">
+
+            <div class="row">
+                <div class="col s12 center">
+                    <h3><i class="mdi-content-send brown-text"></i></h3>
+                    <h4>Information</h4>
+                    <p class="center-align light">Om du vill använda denna tjänst så måste du logga in detta görs med ett gmail konto.<br /> Du kan bara se recept som du har lagt till därmed kan du också bara ge betyg till dina recept. <br />Detta fungerar som en receptbok för den enskilde användare.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="parallax-container valign-wrapper">
+        <div class="section no-pad-bot">
+            <div class="container">
+                @*<div class="row center">
+                    <h5 class="header col s12 light"></h5>
+                </div>*@
+            </div>
+        </div>
+        <div class="parallax"><img src="background3.jpg" alt="Unsplashed background img 3"></div>
+    </div>
+
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Info</h5>
+                    <p class="grey-text text-lighten-4">Just a student doing this because it´s fun :)</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Settings</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="brown-text text-lighten-3" href="https://github.com/Shocknorriss">Samuel Davidsson</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+
+</body>
+</html>
+
+

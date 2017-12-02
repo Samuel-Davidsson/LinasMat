@@ -10011,11 +10011,7 @@ if (Vel) {
     },
     open: function () {},
     close: function () {}
-    };
-
-  $(document).ready(function () {
-      $('.carousel').carousel();
-  });
+  };
 
   $.fn.tapTarget = function (methodOrOptions) {
     if (methods[methodOrOptions] || typeof methodOrOptions === 'object') return methods.init.apply(this, arguments);

@@ -3,25 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Linas Matkasse</title>
-    <link rel="stylesheet" href="~/lib/materialize/css/materialize.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <title>@ViewData["Title"] - Linas Favoriter</title>
+    <link rel="stylesheet" href="~/lib/materialize/css/materialize.min.css" />
+
 </head>
 <body>
-    <nav>
-        <div class="container">
-
-            <div class="nav-wrapper">
-                <a asp-controller="Home" asp-action="Index" class="brand-logo">Linas Matkasse</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li is-active-route asp-controller="Home">
-                        <a asp-controller="Home" asp-action="Index">Home</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <div class="container">
         @RenderBody()
         <hr />

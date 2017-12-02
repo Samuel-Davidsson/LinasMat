@@ -1,0 +1,92 @@
+﻿.font-weight-light h1 h2 {
+    font-weight: 300;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0.3em 0 0.3em 0;
+}
+
+header h2 {
+    margin: 0;
+    padding: 0.3em 0 0.3em 0;
+}
+
+header, main, footer {
+    padding-left: 24em;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+
+    .button-collapse {
+        display: block;
+    }
+}
+
+@media only screen and (min-width : 992px) {
+    .button-collapse {
+        display: none;
+    }
+}
+
+.parallax-content-section {
+    padding: 2em;
+}
+
+#contact-content {
+    display: none !important;
+}
+
+#in-parallax-header-container {
+    margin-top: 7em;
+    margin-bottom: 3em;
+}
+
+#in-parallax-header-h1 {
+    font-size: 2.3em;
+    padding: 0;
+    line-height: 1em;
+}
+
+
+.contact-info-fieldset {
+    margin-bottom: 1em;
+}
+
+fieldset {
+    border-color: #ffffff;
+}
+
+
+.parallax-container {
+    height: 1080px;
+}
+
+#parallax-registration-section {
+    display: none;
+}
+
+#first-parallax-img {
+    filter: grayscale(70%);
+}
+
+#second-parallax-img {
+    filter: grayscale(70%);
+}
+
+.error-msg {
+    margin-left: 1em;
+    display: block-level;
+}
+
+#register-washstation {
+    display: none;
+}
+
+
+.hidden {
+    display: none;
+}
