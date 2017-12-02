@@ -9,9 +9,10 @@ using Domain.Entities;
 namespace Data.Migrations
 {
     [DbContext(typeof(LinasMatkasseContext))]
-    partial class LinasMatkasseContextModelSnapshot : ModelSnapshot
+    [Migration("20171202210008_AddedOneTableAndMadeSomeChanges")]
+    partial class AddedOneTableAndMadeSomeChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.3")

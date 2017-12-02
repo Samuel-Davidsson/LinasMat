@@ -8,8 +8,18 @@ namespace Domain.Entities
         public string Name { get; set; }
         public string Description { get; set; }
         public string ImgThumbnail { get; set; }
-
+        public FoodType FoodType { get; set; }
         ICollection<Ingredient> Ingredients { get; set; }
         ICollection<Review> Reviews { get; set; }
+    }
+
+    public enum FoodType
+    {
+        Chicken,
+        Vegan,
+        Pork,
+        Beef,
+        Fish,
+        Seafood
     }
 }
