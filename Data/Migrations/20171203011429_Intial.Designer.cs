@@ -9,8 +9,8 @@ using Domain.Entities;
 namespace Data.Migrations
 {
     [DbContext(typeof(LinasMatkasseContext))]
-    [Migration("20170930172208_DbFirst")]
-    partial class DbFirst
+    [Migration("20171203011429_Intial")]
+    partial class Intial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,8 +24,6 @@ namespace Data.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("Ammount");
-
-                    b.Property<int>("FoodType");
 
                     b.Property<string>("Name");
 
@@ -41,6 +39,8 @@ namespace Data.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<int>("FoodType");
+
                     b.Property<string>("ImgThumbnail");
 
                     b.Property<string>("Name");
@@ -50,6 +50,24 @@ namespace Data.Migrations
                     b.ToTable("Recipe");
                 });
 
+            modelBuilder.Entity("Domain.Entities.RecipeIngredients", b =>
+                {
+                    b.Property<int>("RecipeIngredientsID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("IngredientID");
+
+                    b.Property<int>("RecipeID");
+
+                    b.HasKey("RecipeIngredientsID");
+
+                    b.HasIndex("IngredientID");
+
+                    b.HasIndex("RecipeID");
+
+                    b.ToTable("RecipeIngredients");
+                });
+
             modelBuilder.Entity("Domain.Entities.Review", b =>
                 {
                     b.Property<int>("Id")
@@ -57,9 +75,13 @@ namespace Data.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<int>("RecipeID");
+
                     b.Property<int>("Score");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RecipeID");
 
                     b.ToTable("Review");
                 });
@@ -82,6 +104,27 @@ namespace Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("Domain.Entities.RecipeIngredients", b =>
+                {
+                    b.HasOne("Domain.Entities.Ingredient", "Ingredient")
+                        .WithMany()
+                        .HasForeignKey("IngredientID")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Domain.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeID")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("Domain.Entities.Review", b =>
+                {
+                    b.HasOne("Domain.Entities.Recipe", "Recipe")
+                        .WithMany()
+                        .HasForeignKey("RecipeID")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
         }
     }

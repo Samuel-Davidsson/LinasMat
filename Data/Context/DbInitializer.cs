@@ -44,6 +44,25 @@ namespace Data.Context
             };
             context.Ingredient.AddRange(ingredients);
             context.SaveChanges();
+
+            var recipeIngredients = new RecipeIngredients[]
+            {
+                new RecipeIngredients{Recipe=recipe1, Ingredient=ingredient6},
+                new RecipeIngredients{Recipe=recipe1, Ingredient=ingredient10},
+                new RecipeIngredients{Recipe=recipe1, Ingredient=ingredient8},
+                new RecipeIngredients{Recipe=recipe1, Ingredient=ingredient7},
+
+                new RecipeIngredients{Recipe=recipe2, Ingredient=ingredient9},
+                new RecipeIngredients{Recipe=recipe2, Ingredient=ingredient3},
+
+                new RecipeIngredients{Recipe=recipe3, Ingredient=ingredient3},
+                new RecipeIngredients{Recipe=recipe3, Ingredient=ingredient4},
+                new RecipeIngredients{Recipe=recipe3, Ingredient=ingredient2},
+                new RecipeIngredients{Recipe=recipe3, Ingredient=ingredient1},
+                new RecipeIngredients{Recipe=recipe3, Ingredient=ingredient5}
+            };
+            context.RecipeIngredients.AddRange(recipeIngredients);
+            context.SaveChanges();
     }
     }
 }
